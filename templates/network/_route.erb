@@ -1,0 +1,23 @@
+<% if @route and ! @route.empty? -%>
+  <%- [@route].flatten.compact.each do |route| %>
+[Route]
+    <%- if route['gateway'] -%>
+Gateway=<%= route['gateway'] %>
+    <%- end -%>
+    <%- if route['destination'] -%>
+Destination=<%= route['destination'] %>
+    <%- end -%>
+    <%- if route['source'] -%>
+Source=<%= route['source'] %>
+    <%- end -%>
+    <%- if route['metric'] -%>
+Metric=<%= route['metric'] %>
+    <%- end -%>
+    <%- if route['scope'] -%>
+Scope=<%= route['scope'] %>
+    <%- end -%>
+    <%- if route['preferred_source'] -%>
+PreferredSource=<%= route['preferred_source'] %>
+    <%- end -%>
+  <% end -%>
+<% end %>

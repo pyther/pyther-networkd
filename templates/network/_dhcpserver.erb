@@ -1,0 +1,43 @@
+<%-
+def bool2yesno (value)
+  value = if value == true then 'yes' elsif value == false then 'no' else value end
+  return value
+end
+-%>
+<% if @dhcpserver and ! @dhcpserver.empty? -%>
+[DHCPServer]
+  <%- if @dhcpserver['pool_offset'] -%>
+PoolOffset=<%= @dhcpserver['pool_offset'] %>
+  <%- end -%>
+  <%- if @dhcpserver['pool_size'] -%>
+PoolSize=<%= @dhcpserver['pool_size'] %>
+  <%- end -%>
+  <%- if @dhcpserver['default_lease_time_sec'] -%>
+DefaultLeaseTimeSec=<%= @dhcpserver['default_lease_time_sec'] %>
+  <%- end -%>
+  <%- if @dhcpserver['max_lease_time_sec'] -%>
+MaxLeaseTimeSec=<%= @dhcpserver['max_lease_time_sec'] %>
+  <%- end -%>
+  <%- if @dhcpserver['emit_dns'] -%>
+EmitDNS=<%= bool2yeson(@dhcpserver['emit_dns']) %>
+  <%- end -%>
+  <%- if @dhcpserver['dns'] -%>
+    <%- [@dhcpserver['dns']].flatten.compact.each do |value| %>
+DNS=<%= value %>
+  <%- end -%>
+  <%- end -%>
+  <%- if @dhcpserver['emit_ntp'] -%>
+EmitNTP=<%= bool2yeson(@dhcpserver['emit_ntp']) %>
+  <%- end -%>
+  <%- if @dhcpserver['ntp'] -%>
+    <%- [@dhcpserver['ntp']].flatten.compact.each do |value| %>
+NTP=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @dhcpserver['emit_timezone'] -%>
+EmitTimezone=<%= bool2yeson(@dhcpserver['emit_timezone']) %>
+  <%- end -%>
+  <%- if @dhcpserver['timezone'] -%>
+Timezone=<%= @dhcpserver['timezone'] %>
+  <%- end -%>
+<% end %>

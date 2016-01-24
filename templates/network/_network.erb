@@ -1,0 +1,104 @@
+<%-
+def bool2yesno (value)
+  value = if value == true then 'yes' elsif value == false then 'no' else value end
+  return value
+end
+
+-%>
+<% if @network and ! @network.empty? -%>
+[Network]
+  <%- if @network['description'] -%>
+Description=<%= @network['description'] %>
+  <%- end -%>
+  <%- if @network['dhcp'] -%>
+DHCP=<%= bool2yesno(@network['dhcp']) %>
+  <%- end -%>
+  <%- if @network['dhcp_server'] -%>
+DHCPServer=<%= bool2yesno(@network['dhcp_server']) %>
+  <%- end -%>
+  <%- if @network['link_local_addressing'] -%>
+LinkLocalAddressing=<%= bool2yesno(@network['link_local_addressing']) %>
+  <%- end -%>
+  <%- if @network['ipv4_llroute'] -%>
+IPv4LLRoute=<%= @network['ipv4_llroute'] %>
+  <%- end -%>
+  <%- if @network['ipv6_token'] -%>
+IPv6Token=<%= @network['ipv6_token'] %>
+  <%- end -%>
+  <%- if @network['llmnr'] -%>
+LLMNR=<%= @network['llmnr'] %>
+  <%- end -%>
+  <%- if @network['lldp'] -%>
+LLDP=<%= @network['lldp'] %>
+  <%- end -%>
+  <%- if @network['bind_carrier'] -%>
+BindCarrier=<%= @network['bind_carrier'] %>
+  <%- end -%>
+  <%- if @network['address'] -%>
+    <%- [@network['address']].flatten.compact.each do |value| -%>
+Address=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['gateway'] -%>
+    <%- [@network['gateway']].flatten.compact.each do |value| -%>
+Gateway=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['dns'] -%>
+    <%- [@network['dns']].flatten.compact.each do |value| -%>
+DNS=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['domains'] -%>
+Domains=<%= @network['domains'] %>
+  <%- end -%>
+  <%- if @network['ntp'] -%>
+    <%- [@network['ntp']].flatten.compact.each do |value| -%>
+NTP=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['ip_forward'] -%>
+IPForward=<%= bool2yesno(@network['ip_forward']) %>
+  <%- end -%>
+  <%- if @network['ip_masquerade'] -%>
+IPMasquerade=<%= bool2yesno(@network['ip_masquerade']) %>
+  <%- end -%>
+  <%- if @network['ipv6_privacy_extensions'] -%>
+IPv6PrivacyExtensions=<%= bool2yesno(@network['ipv6_privacy_extensions']) %>
+  <%- end -%>
+  <%- if @network['ipv6_accept_router_advertisments'] -%>
+IPv6AcceptRouterAdvertisements=<%= @network['ipv6_accept_router_advertisments'] %>
+  <%- end -%>
+  <%- if @network['ipv6_duplicate_address_detection'] -%>
+IPv6DuplicateAddressDetection=<%= @network['ipv6_duplicate_address_detection'] %>
+  <%- end -%>
+  <%- if @network['ipv6_hop_limit'] -%>
+IPv6HopLimit=<%= @network['ipv6_hop_limit'] %>
+  <%- end -%>
+  <%- if @network['bridge'] -%>
+Bridge=<%= @network['bridge'] %>
+  <%- end -%>
+  <%- if @network['bond'] -%>
+Bond=<%= @network['bond'] %>
+  <%- end -%>
+  <%- if @network['vlan'] -%>
+    <%- [@network['vlan']].flatten.compact.each do |value| -%>
+VLAN=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['macvlan'] -%>
+    <%- [@network['macvlan']].flatten.compact.each do |value| -%>
+MACLAN=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['vxlan'] -%>
+    <%- [@network['vxlan']].flatten.compact.each do |value| -%>
+VXLAN=<%= value %>
+    <%- end -%>
+  <%- end -%>
+  <%- if @network['tunnel'] -%>
+    <%- [@network['tunnel']].flatten.compact.each do |value| -%>
+Tunnel=<%= value %>
+    <%- end -%>
+  <%- end -%>
+<% end %>

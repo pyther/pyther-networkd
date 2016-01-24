@@ -1,0 +1,27 @@
+<%-
+def bool2yesno (value)
+  value = if value == true then 'yes' elsif value == false then 'no' else value end
+  return value
+end
+-%>
+<%- if @bridge and ! @bridge.empty? -%>
+[Bridge]
+  <%- if @bridge['unicast_flood'] -%>
+UnicastFlood=<%= bool2yesno(@bridge['unicast_flood']) %>
+  <%- end -%>
+  <%- if @bridge['hair_pin'] -%>
+HairPin=<%= @bridge['hair_pin'] %>
+  <%- end -%>
+  <%- if @bridge['use_bpdu'] -%>
+UseBPDU=<%= bool2yesno(@bridge['use_bpdu']) %>
+  <%- end -%>
+  <%- if @bridge['fast_leave'] -%>
+FastLeave=<%= @bridge['fast_leave'] %>
+  <%- end -%>
+  <%- if @bridge['allow_port_to_be_root'] -%>
+AllowPortToBeRoot=<%= bool2yeson(@bridge['allow_port_to_be_root']) %>
+  <%- end -%>
+  <%- if @bridge['cost'] -%>
+Cost=<%= @bridge['cost'] %>
+  <%- end -%>
+<%- end %>

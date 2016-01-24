@@ -1,0 +1,9 @@
+<%- if @peer and ! @peer.empty? -%>
+[Peer]
+  <%- if @peer['name'] -%>
+Name=<%= @peer['name'] %>
+  <%- end -%>
+  <%- if @peer['mac_address'] -%>
+MacAddress=<%= @peer['mac_address'] %>
+  <%- end -%>
+<%- end %>

@@ -1,0 +1,15 @@
+<% if @match and ! @match.empty? -%>
+[Match]
+  <%- if @match['host'] -%>
+Host=<%= @match['host'] %>
+  <%- end -%>
+  <%- if @match['virtualization'] -%>
+Virtualization=<%= @match['virtualization'] %>
+  <%- end -%>
+  <%- if @match['kernel_command_line'] -%>
+KernelCommandLine=<%= @match['kernel_command_line'] %>
+  <%- end -%>
+  <%- if @match['architecture'] -%>
+Architecture=<%= @match['architecture'] %>
+  <%- end -%>
+<% end %>

@@ -1,0 +1,33 @@
+<% if @link and ! @link.empty? -%>
+[Link]
+  <%- if @link['description'] -%>
+Description=<%= @link['description'] %>
+  <%- end -%>
+  <%- if @link['alias'] -%>
+Alias=<%= @link['alias'] %>
+  <%- end -%>
+  <%- if @link['mac_address_policy'] -%>
+MACAddressPolicy=<%= @link['mac_address_policy'] %>
+  <%- end -%>
+  <%- if @link['mac_address'] -%>
+MACAddress=<%= @link['mac_address'] %>
+  <%- end -%>
+  <%- if @link['name_policy'] -%>
+NamePolicy=<%= @link['name_policy'] %>
+  <%- end -%>
+  <%- if @link['name'] -%>
+Name=<%= @link['name'] %>
+  <%- end -%>
+  <%- if @link['mtu_bytes'] -%>
+MTUBytes=<%= @link['mtu_bytes'] %>
+  <%- end -%>
+  <%- if @link['bits_per_second'] -%>
+BitsPerSecond=<%= @link['bits_per_second'] %>
+  <%- end -%>
+  <%- if @link['duplex'] -%>
+Duplex=<%= @link['duplex'] %>
+  <%- end -%>
+  <%- if @link['wake_on_lan'] -%>
+WakeOnLan=<%= @link['wake_on_lan'] %>
+  <%- end -%>
+<% end %>

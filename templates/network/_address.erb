@@ -1,0 +1,17 @@
+<% if @address and ! @address.empty? -%>
+  <%- [@address].flatten.compact.each do |address| %>
+[Address]
+    <%- if address['address'] -%>
+Address=<%= address['address'] %>
+    <%- end -%>
+    <%- if address['peer'] -%>
+Peer=<%= address['peer'] %>
+    <%- end -%>
+    <%- if address['broadcast'] -%>
+Broadcast=<%= address['broadcast'] %>
+    <%- end -%>
+    <%- if address['label'] -%>
+Label=<%= address['label'] %>
+    <%- end -%>
+  <%- end -%>
+<% end %>

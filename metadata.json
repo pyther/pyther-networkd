@@ -1,0 +1,24 @@
+{
+  "name": "pyther-networkd",
+  "version": "0.0.1",
+  "author": "Matthew Gyurgyik",
+  "license": "MIT",
+  "summary": "systemd-networkd module",
+  "tags": ["systemd-networkd", "networkd"],
+  "project_page": "https://forge.puppetlabs.com/pyther/networkd",
+  "issues_url": "https://github.com/pyther24/pyther-networkd/issues",
+  "operatingsystem_support": [
+    {
+    "operatingsystem":"RedHat",
+    "operatingsystemrelease": [ "7.0" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "15.10" ]
+    }
+  ],
+  "dependencies": [
+    { "name": "puppetlabs/stdlib", "version_requirement": ">= 2.0.1" },
+    { "name": "puppetlabs/concat", "version_requirement": ">= 1.0.0" }
+  ]
+}

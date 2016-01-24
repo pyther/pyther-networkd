@@ -1,0 +1,6 @@
+<%- if @ipvlan and ! @ipvlan.empty? -%>
+[IPVLAN]
+  <%- if @ipvlan['mode'] -%>
+Mode=<%= @ipvlan['mode'] %>
+  <%- end -%>
+<%- end %>

@@ -1,0 +1,12 @@
+<%- if @bridge and ! @bridge.empty? -%>
+[Bridge]
+  <%- if @bridge['hello_time_sec'] -%>
+HelloTimeSec=<%= @bridge['hello_time_sec'] %>
+  <%- end -%>
+  <%- if @bridge['max_age_sec'] -%>
+MaxAgeSec=<%= @bridge['max_age_sec'] %>
+  <%- end -%>
+  <%- if @bridge['forward_delay_sec'] -%>
+ForwardDelaySec=<%= @bridge['forward_delay_sec'] %>
+  <%- end -%>
+<%- end %>

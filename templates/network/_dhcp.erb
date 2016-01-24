@@ -1,0 +1,51 @@
+<%-
+def bool2yesno (value)
+  value = if value == true then 'yes' elsif value == false then 'no' else value end
+  return value
+end
+-%>
+<% if @dhcp and ! @dhcp.empty? -%>
+[DHCP]
+  <%- if @dhcp['use_dns'] -%>
+UseDNS=<%= @dhcp['use_dns'] %>
+  <%- end -%>
+  <%- if @dhcp['use_ntp'] -%>
+UseNTP=<%= @dhcp['use_ntp'] %>
+  <%- end -%>
+  <%- if @dhcp['use_mtu'] -%>
+UseMTU=<%= @dhcp['use_mtu'] %>
+  <%- end -%>
+  <%- if @dhcp['send_hostname'] -%>
+SendHostname=<%= @dhcp['send_hostname'] %>
+  <%- end -%>
+  <%- if @dhcp['use_hostname'] -%>
+UseHostname=<%= @dhcp['use_hostname'] %>
+  <%- end -%>
+  <%- if @dhcp['hostname'] -%>
+Hostname=<%= @dhcp['hostname'] %>
+  <%- end -%>
+  <%- if @dhcp['use_domains'] -%>
+UseDomains=<%= @dhcp['use_domains'] %>
+  <%- end -%>
+  <%- if @dhcp['use_routes'] -%>
+UseRoutes=<%= @dhcp['use_routes'] %>
+  <%- end -%>
+  <%- if @dhcp['use_timezone'] -%>
+UseTimezone=<%= bool2yeson(@dhcp['use_timezone']) %>
+  <%- end -%>
+  <%- if @dhcp['critical_connection'] -%>
+CriticalConnection=<%= @dhcp['critical_connection'] %>
+  <%- end -%>
+  <%- if @dhcp['client_identifier'] -%>
+ClientIdentifier=<%= @dhcp['client_identifier'] %>
+  <%- end -%>
+  <%- if @dhcp['vendor_class_identifier'] -%>
+VendorClassIdentifier=<%= @dhcp['vendor_class_identifier'] %>
+  <%- end -%>
+  <%- if @dhcp['request_broadcast'] -%>
+RequestBroadcast=<%= @dhcp['request_broadcast'] %>
+  <%- end -%>
+  <%- if @dhcp['route_metric'] -%>
+RouteMetric=<%= @dhcp['route_metric'] %>
+  <%- end -%>
+<% end %>

@@ -1,0 +1,6 @@
+<%- if @macvtap and ! @macvtap.empty? -%>
+[MACVTAP]
+  <%- if @macvtap['mode'] -%>
+Mode=<%= @macvtap['mode'] %>
+  <%- end -%>
+<%- end %>

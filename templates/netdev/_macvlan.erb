@@ -1,0 +1,6 @@
+<%- if @macvlan and ! @macvlan.empty? -%>
+[MACVLAN]
+  <%- if @macvlan['mode'] -%>
+Mode=<%= @macvlan['mode'] %>
+  <%- end -%>
+<%- end %>

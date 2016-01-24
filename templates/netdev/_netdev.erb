@@ -1,0 +1,18 @@
+<% if @netdev and ! @netdev.empty? -%>
+[NetDev]
+  <%- if @netdev['description'] -%>
+Description=<%= @netdev['description'] %>
+  <%- end -%>
+  <%- if @netdev['name'] -%>
+Name=<%= @netdev['name'] %>
+  <%- end -%>
+  <%- if @netdev['kind'] -%>
+Kind=<%= @netdev['kind'] %>
+  <%- end -%>
+  <%- if @netdev['mtu_bytes'] -%>
+MTUBytes=<%= @netdev['mtu_bytes'] %>
+  <%- end -%>
+  <%- if @netdev['mac_address'] -%>
+MACAddress=<%= @netdev['mac_address'] %>
+  <%- end -%>
+<% end %>

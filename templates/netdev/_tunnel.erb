@@ -1,0 +1,30 @@
+<%- if @tunnel and ! @tunnel.empty? -%>
+[Tunnel]
+  <%- if @tunnel['local'] -%>
+Local=<%= @tunnel['local'] %>
+  <%- end -%>
+  <%- if @tunnel['remote'] -%>
+Remote=<%= @tunnel['remote'] %>
+  <%- end -%>
+  <%- if @tunnel['tos'] -%>
+TOS=<%= @tunnel['tos'] %>
+  <%- end -%>
+  <%- if @tunnel['ttl'] -%>
+TTL=<%= @tunnel['ttl'] %>
+  <%- end -%>
+  <%- if @tunnel['discover_path_mtu'] -%>
+DiscoverPathMTU=<%= @tunnel['discover_path_mtu'] %>
+  <%- end -%>
+  <%- if @tunnel['ipv6_flow_label'] -%>
+IPv6FlowLabel=<%= @tunnel['ipv6_flow_label'] %>
+  <%- end -%>
+  <%- if @tunnel['copy_dscp'] -%>
+CopyDSCP=<%= @tunnel['copy_dscp'] %>
+  <%- end -%>
+  <%- if @tunnel['encapsulation_limit'] -%>
+EncapsulationLimit=<%= @tunnel['encapsulation_limit'] %>
+  <%- end -%>
+  <%- if @tunnel['mode'] -%>
+Mode=<%= @tunnel['mode'] %>
+  <%- end -%>
+<%- end %>

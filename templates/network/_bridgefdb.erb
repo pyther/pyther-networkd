@@ -1,0 +1,9 @@
+<% if @bridgefdb and ! @bridgefdb.empty? -%>
+[BridgeFDB]
+  <%- if @bridgefdb['mac_address'] -%>
+MACAdddress=<%= @bridgefdb['mac_address'] %>
+  <%- end -%>
+  <%- if @bridgefdb['vlan_id'] -%>
+VLANId=<%= @bridgefdb['vlan_id'] %>
+  <%- end -%>
+<% end %>

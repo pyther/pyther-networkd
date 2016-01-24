@@ -1,0 +1,21 @@
+<%- if @tun and ! @tun.empty? -%>
+[Tun]
+  <%- if @tun['one_queue'] -%>
+OneQueue=<%= @tun['one_queue'] %>
+  <%- end -%>
+  <%- if @tun['multi_queue'] -%>
+MultiQueue=<%= @tun['multi_queue'] %>
+  <%- end -%>
+  <%- if @tun['packet_info'] -%>
+PacketInfo=<%= @tun['packet_info'] %>
+  <%- end -%>
+  <%- if @tun['vnet_header'] -%>
+VNetHeader=<%= @tun['vnet_header'] %>
+  <%- end -%>
+  <%- if @tun['user'] -%>
+User=<%= @tun['user'] %>
+  <%- end -%>
+  <%- if @tun['group'] -%>
+Group=<%= @tun['group'] %>
+  <%- end -%>
+<%- end %>

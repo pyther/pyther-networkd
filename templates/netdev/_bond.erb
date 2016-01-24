@@ -1,0 +1,60 @@
+<%- if @bond and ! @bond.empty? -%>
+[Bond]
+  <%- if @bond['mode'] -%>
+Mode=<%= @bond['mode'] %>
+  <%- end -%>
+  <%- if @bond['transmit_hash_policy'] -%>
+TransmitHashPolicy=<%= @bond['transmit_hash_policy'] %>
+  <%- end -%>
+  <%- if @bond['lacp_transmit_rate'] -%>
+LACPTransmitRate=<%= @bond['lacp_transmit_rate'] %>
+  <%- end -%>
+  <%- if @bond['mii_monitor_sec'] -%>
+MIIMonitorSec=<%= @bond['mii_monitor_sec'] %>
+  <%- end -%>
+  <%- if @bond['up_delay_sec'] -%>
+UpDelaySec=<%= @bond['up_delay_sec'] %>
+  <%- end -%>
+  <%- if @bond['down_delay_sec'] -%>
+DownDelaySec=<%= @bond['down_delay_sec'] %>
+  <%- end -%>
+  <%- if @bond['learn_packet_interval_sec'] -%>
+LearnPacketIntervalSec=<%= @bond['learn_packet_interval_sec'] %>
+  <%- end -%>
+  <%- if @bond['ad_select'] -%>
+AdSelect=<%= @bond['ad_select'] %>
+  <%- end -%>
+  <%- if @bond['fail_over_mac_policy'] -%>
+FailOverMACPolicy=<%= @bond['fail_over_mac_policy'] %>
+  <%- end -%>
+  <%- if @bond['arp_validate'] -%>
+ARPValidate=<%= @bond['arp_validate'] %>
+  <%- end -%>
+  <%- if @bond['arp_interval_sec'] -%>
+ARPIntervalSec=<%= @bond['arp_interval_sec'] %>
+  <%- end -%>
+  <%- if @bond['arp_ip_targets'] -%>
+ARPIPTargets=<%= @bond['arp_ip_targets'] %>
+  <%- end -%>
+  <%- if @bond['arp_all_targets'] -%>
+ARPAllTargets=<%= @bond['arp_all_targets'] %>
+  <%- end -%>
+  <%- if @bond['primary_reselect_policy'] -%>
+PrimaryReselectPolicy=<%= @bond['primary_reselect_policy'] %>
+  <%- end -%>
+  <%- if @bond['resend_igmp'] -%>
+ResendIGMP=<%= @bond['resend_igmp'] %>
+  <%- end -%>
+  <%- if @bond['packets_per_slave'] -%>
+PacketsPerSlave=<%= @bond['packets_per_slave'] %>
+  <%- end -%>
+  <%- if @bond['gratuitous_arp'] -%>
+GratuitousARP=<%= @bond['gratuitous_arp'] %>
+  <%- end -%>
+  <%- if @bond['all_slaves_active'] -%>
+AllSlavesActive=<%= @bond['all_slaves_active'] %>
+  <%- end -%>
+  <%- if @bond['min_links'] -%>
+MinLinks=<%= @bond['min_links'] %>
+  <%- end -%>
+<%- end %>

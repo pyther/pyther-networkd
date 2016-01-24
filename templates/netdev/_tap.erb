@@ -1,0 +1,21 @@
+<%- if @tap and ! @tap.empty? -%>
+[Tap]
+  <%- if @tap['one_queue'] -%>
+OneQueue=<%= @tap['one_queue'] %>
+  <%- end -%>
+  <%- if @tap['multi_queue'] -%>
+MultiQueue=<%= @tap['multi_queue'] %>
+  <%- end -%>
+  <%- if @tap['packet_info'] -%>
+PacketInfo=<%= @tap['packet_info'] %>
+  <%- end -%>
+  <%- if @tap['vnet_header'] -%>
+VNetHeader=<%= @tap['vnet_header'] %>
+  <%- end -%>
+  <%- if @tap['user'] -%>
+User=<%= @tap['user'] %>
+  <%- end -%>
+  <%- if @tap['group'] -%>
+Group=<%= @tap['group'] %>
+  <%- end -%>
+<%- end %>

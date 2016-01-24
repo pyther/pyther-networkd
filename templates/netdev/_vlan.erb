@@ -1,0 +1,6 @@
+<%- if @vlan and ! @vlan.empty? -%>
+[VLAN]
+  <%- if @vlan['id'] -%>
+Id=<%= @vlan['id'] %>
+  <%- end -%>
+<%- end %>

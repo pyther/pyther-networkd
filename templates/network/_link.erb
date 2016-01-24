@@ -1,0 +1,9 @@
+<% if @link and ! @link.empty? -%>
+[Link]
+  <%- if @link['mac_address'] -%>
+MACAddress=<%= @link['mac_address'] %>
+  <%- end -%>
+  <%- if @link['mtu_bytes'] -%>
+MTUBytes=<%= @link['mtu_bytes'] %>
+  <%- end -%>
+<% end %>

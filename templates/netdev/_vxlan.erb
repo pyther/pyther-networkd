@@ -1,0 +1,48 @@
+<%- if @vxlan and ! @vxlan.empty? -%>
+[VXLAN]
+  <%- if @vxlan['id'] -%>
+Id=<%= @vxlan['id'] %>
+  <%- end -%>
+  <%- if @vxlan['group'] -%>
+Group=<%= @vxlan['group'] %>
+  <%- end -%>
+  <%- if @vxlan['tos'] -%>
+TOS=<%= @vxlan['tos'] %>
+  <%- end -%>
+  <%- if @vxlan['ttl'] -%>
+TTL=<%= @vxlan['ttl'] %>
+  <%- end -%>
+  <%- if @vxlan['mac_learning'] -%>
+MacLearning=<%= @vxlan['mac_learning'] %>
+  <%- end -%>
+  <%- if @vxlan['fdb_ageing_sec'] -%>
+FDBAgeingSec=<%= @vxlan['fdb_ageing_sec'] %>
+  <%- end -%>
+  <%- if @vxlan['maximum_fdb_entries'] -%>
+MaximumFDBEntries=<%= @vxlan['maximum_fdb_entries'] %>
+  <%- end -%>
+  <%- if @vxlan['arp_proxy'] -%>
+ArpProxy=<%= @vxlan['arp_proxy'] %>
+  <%- end -%>
+  <%- if @vxlan['l2_miss_notification'] -%>
+L2MissNotification=<%= @vxlan['l2_miss_notification'] %>
+  <%- end -%>
+  <%- if @vxlan['l3_miss_notification'] -%>
+L3MissNotification=<%= @vxlan['l3_miss_notification'] %>
+  <%- end -%>
+  <%- if @vxlan['route_short_circuit'] -%>
+RotueShortCircuit=<%= @vxlan['route_short_circuit'] %>
+  <%- end -%>
+  <%- if @vxlan['udp_check_sum'] -%>
+UDPCheckSum=<%= @vxlan['udp_check_sum'] %>
+  <%- end -%>
+  <%- if @vxlan['udp6_zero_checksum_tx'] -%>
+UDP6ZeroChecksumTx=<%= @vxlan['udp6_zero_checksum_tx'] %>
+  <%- end -%>
+  <%- if @vxlan['udp6_zero_checksum_rx'] -%>
+UDP6ZeroChecksumRx=<%= @vxlan['udp6_zero_checksum_rx'] %>
+  <%- end -%>
+  <%- if @vxlan['group_policy_extension'] -%>
+GroupPolicyExtension=<%= @vxlan['group_policy_extension'] %>
+  <%- end -%>
+<%- end %>
