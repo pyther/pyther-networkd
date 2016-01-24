@@ -253,7 +253,7 @@ Example 10
     }
 
 ### Link
-Assigns the fixed name "dmz0" to the interface with the MAC address 00:a0:de:63:7a:e6:
+Assigns the fixed name "dmz0" to the interface with the MAC address `00:a0:de:63:7a:e6`:
 
     network::link { '10-dmz':
       match => { mac_address => '00:a0:de:63:7a:e6' },
