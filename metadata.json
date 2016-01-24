@@ -6,7 +6,7 @@
   "summary": "systemd-networkd module",
   "tags": ["systemd-networkd", "networkd"],
   "project_page": "https://forge.puppetlabs.com/pyther/networkd",
-  "issues_url": "https://github.com/pyther24/pyther-networkd/issues",
+  "issues_url": "https://github.com/pyther/pyther-networkd/issues",
   "operatingsystem_support": [
     {
     "operatingsystem":"RedHat",
