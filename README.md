@@ -1,4 +1,4 @@
-#networkd
+#pyther-networkd
 
 ####Table of Contents
 
@@ -17,14 +17,15 @@
 
 ##Module Description
 
-The networkd module managed network interfaces using systemd-networkd.
+The networkd module manages network configuration using systemd-networkd.
 
 ## Setup
 
 ###Resources managed by networkd module
 * This module enables the systemd-networkd service
-* This module installs the systemd-networkd package (RHEL7)
-* This module manages /etc/systemd/networkd
+* This module manages the /etc/systemd/networkd directory
+* On RHEL7, this module installs the systemd-networkd package
+* Optionally, this module can manage the systemd-networkd-wait-online service
 
 ###Setup Requirements
 * PuppetLabs [stdlib module](https://github.com/puppetlabs/puppetlabs-stdlib)
@@ -34,9 +35,9 @@ The networkd module managed network interfaces using systemd-networkd.
 ###Beginning with module networkd
 
 All configuration parameters come from the systemd-networkd man pages.
-* `systemd.network(5)`
-* `systemd.netdev(5)`
-* `systemd.link(5)`
+* systemd.network(5)
+* systemd.netdev(5)
+* systemd.link(5)
 
 Use the `networkd::network`, `networkd::link`, or `networkd::netdev` define types.
 
@@ -338,7 +339,10 @@ Bond interface:
 
 ##Operating Systems Support
 
-Tested on RedHat 7. Should theoratically work on any system with systemd-networkd.
+Tested on RedHat 7.
+
+This should work on any system with systemd-networkd. If this is not the case
+please submit a bug report.
 
 ## Development
 
